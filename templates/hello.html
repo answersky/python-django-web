@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+{% ifequal 'hello' hello %}
+    <h1>{{ hello }}</h1>
+{% else %}
+    say byebey!
+{% endifequal %}
+
+<ul>
+    {% for num in nums %}
+        <li>{{ num }}</li>
+    {% endfor %}
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>username</th>
+            <th>password</th>
+            <th>role</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in datas %}
+            <tr>
+                {% for value in data %}
+                    <td>{{ value }}</td>
+                 {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+</body>
+</html>
